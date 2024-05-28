@@ -15,6 +15,8 @@ function getTodos() {
   if (dataBaseTodos) {
     localDb = [...JSON.parse(dataBaseTodos)];
     ul.innerHTML = localDb.map(renderTodos).join("");
+  }else{
+    addTodosToLocalStorage(localDb);
   }
    checkSort();
 }
