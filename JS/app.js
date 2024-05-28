@@ -140,7 +140,7 @@ ul.addEventListener("click", (e) => {
 
 function checkSort() {
   localDb = JSON.parse(localStorage.getItem("db"));
-  if (localDb.length > 1) {
+ localDb && if (localDb.length > 1) {
     sortBtn.classList.add("active");
   } else {
     sortBtn.classList.remove("active");
