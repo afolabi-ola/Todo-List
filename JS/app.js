@@ -116,12 +116,16 @@ function handleEditTodos(id) {
 
       editForm.addEventListener("submit", (e) => {
         e.preventDefault();
-        todo.name = editInput.value;
+        if(editInput.value !== ""){
+         todo.name = editInput.value;
         editInput.value = "";
         editBtn.classList.remove("active");
         removeForm(editForm);
         appendForm(addTodoForm);
         addTodosToLocalStorage(localDb);
+          
+        }
+       
       });
     }
   });
